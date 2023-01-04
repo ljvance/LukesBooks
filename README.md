@@ -1,2 +1,3 @@
 # LukesBooks
-This is a website that i created named Luke's Books. 
+This Repository contains an ecommerce website that i created named Luke's Books. It involves the use of HTML Javascript, CSS, and ejs, as well as the use of MongoDB for database applications.
+Within this website a user is able create an account using their information, which is then placed in a mongoDB. The user can then login to the bookstore and add items to their cart. A cart overay exists so that users may check their cart contents at any time and additionally make a purchase. The order overlay requires the user to add more relevant user information in order for the purchase to be valid, this info is then stored in a seperate file within the same MongoDB.
