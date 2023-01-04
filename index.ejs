@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Luke's Books</title>
+    <link rel = "stylesheet" href = "app.css" />
+    <script src="https://kit.fontawesome.com/e758686572.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id ="wrapper">
+
+      <h4>Hello <%=firstname%> </h4>
+      <a href="/logout">Log Out</a>
+      <div id ="headerstyle">
+        <i id = "profile" class="fa-solid fa-user fa-2x"></i>
+          <i id = "carts" class="fa-solid fa-cart-shopping fa-2x"></i>
+          <div class = "carti">0</div>
+        <h1>Luke's Books</h1>
+        
+      
+      </div>
+        <div id="searchWrapper">
+          <input          
+            type="text"
+            name="searchBar"
+            id="searchBar"
+            placeholder="search for a book"/>
+                <i id = "icon" class="fa-solid fa-magnifying-glass fa-2x"></i>
+                
+            </div>
+        
+            <ul id="booksList"></ul>
+        </div>
+        <div class="cart-overlay">
+                <div class="order-overlay">
+                    <div class="order-form">
+                      
+                        <form action="/order-server" method="post">
+                            <div class="title">
+                                <h2>Place Order</h2>
+                            </div>
+                            <div class="field">
+                                <label>Username</label>
+                                <input type="text" value="<%=username%>" name="username" />
+                                <br>
+                            </div>
+                            <div class="field">
+                                <label>Email:</label>
+                                <input type="email" value="<%=email%>" name="email" required />
+                                <br>
+                            </div>
+                            <div class="field">
+                                <input type="hidden" text="" class="allBookTitles" name="bookTitles" readonly>
+                            </div>
+                            
+                            <div class="field">
+                                <label>Credit Card Info:</label>
+                                <input type="text" placeholder="" name="creditCardNumber" required />
+                            </div>
+
+                            <div class="field">
+                                <label>Address</label>
+                                <input type="text" placeholder="" name="address" required />
+                            </div>
+                            <div class="field">
+                                <label>Price:</label>
+                                <input type="text" text="" class="totalprice" name="totalPrice" readonly >
+                                <br>
+                            </div>
+                            <div class="field">
+                                
+                                <input class="submit-btn" type="submit" value="Submit" required />
+                                <br>
+                                <br>
+                                <span class="close-order">
+                                    <button class="OrderCancel">Cancel Order</button>
+                                </span>
+                            </div>
+                          
+                        </form>
+                    </div>
+                </div>
+              <div class = "cart">
+                <span class="close-cart">
+                  <i class="fas fa-window-close"></i>
+                </span>
+                <h2> Your Cart </h2>
+                <div class="cart-content">
+                  Cart Items
+                </div>
+                <div class="cart-footer">
+                  <h3> Your Total : $<span class="cart-total">0</span></h3>
+                  <button class="clear-cart banner-btn">Clear Cart</button>
+                  <br>
+                  <br>
+                  <button id="place" class="place-order banner-btn">Place an Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="profile-overlay">
+              <div class = "profile">
+                <span class="close-profile">
+                  <i class="fas fa-window-close"></i>
+                </span>
+                <h2> Your Profile </h2>
+                <div class="profile-content">
+                  <h4> Name : <%= firstname %> <%= lastname %> </h4>
+                  <h4> Email : <%= email %> </h4>
+                  <h4> Zipcode : <%= zipcode %> </h4>
+                </div>
+                <div class="profile-footer">
+                </div>
+              </div>
+            </div>
+            <footer>
+                Author: Luke Vance <br>
+                <i>
+                <a href="mailto:"ljvance@millersville.edu">ljvance@millersville.edu</a> <br>
+                </i>
+                View count: <%= amount %>
+        </footer>            
+        <script src="app.js"></script>
+    </body>
+</html>
+

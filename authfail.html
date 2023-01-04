@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Authentication Failure </title>
+  <link rel="stylesheet" href="/css">
+</head>
+
+<body>
+  <div id = "wrapper">
+  <!--action value is important and used in defining routes-->
+  <form action="/login-server" method="post">
+    <div class="authenstyle">
+      <h1>Login</h1>
+    </div>
+    <p> Wrong Username/Password </p>
+    <div class="field">
+      <label>Username:</label>
+      <!--name value is important and used with req.body-->
+      <input type="text" name="username" />
+      <br />
+    </div>
+    <div class="field">
+      <label>Password:</label>
+      <!--name value is important and used with req.body-->
+      <input type="password" name="password" required />
+    </div>
+    <br>
+    <div class="field">
+      <input class="submit-btn" type="submit" value="Submit" required />
+    </div>
+    <label id="error-message"></label>
+    <br>
+    <h4>No Account? Register <a href = '/register'>here</a></h4>
+  </form>
+ 
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const info = urlParams.get('info');
+
+    if(info) {
+      const errorMessage = document.getElementById("error-message");
+      errorMessage.innerText = info;
+      errorMessage.style.display = "block";
+    }
+  </script>
+  </div>
+</body>
+</html>

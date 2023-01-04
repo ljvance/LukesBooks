@@ -1,0 +1,78 @@
+{
+    "items": [
+      {
+        "sys": { "id": "1" },
+        "fields": {
+          "title": "Harry Potter",
+          "price": 39.99,
+          "image": { "fields": { "file": { "url": "/image/HP.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "2" },
+        "fields": {
+          "title": "John Wick",
+          "price": 19.99,
+          "image": { "fields": { "file": { "url": "/image/JW.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "3" },
+        "fields": {
+          "title": "Godzilla: King of the Monsters",
+          "price": 39.99,
+          "image": { "fields": { "file": { "url": "/image/GZ.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "4" },
+        "fields": {
+          "title": "Introduction to Algorithms",
+          "price": 109.99,
+          "image": { "fields": { "file": { "url": "/image/IA.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "5" },
+        "fields": {
+          "title": "Lord of the Ring",
+          "price": 28.99,
+          "image": { "fields": { "file": { "url": "/image/LR.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "6" },
+        "fields": {
+          "title": "Game of Thrones",
+          "price": 32.99,
+          "image": { "fields": { "file": { "url": "/image/GOT.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "7" },
+        "fields": {
+          "title": "Automata, Languages and Computation",
+          "price": 45.99,
+          "image": { "fields": { "file": { "url": "/image/ALC.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "8" },
+        "fields": {
+          "title": "Star War II",
+          "price": 33.99,
+          "image": { "fields": { "file": { "url": "/image/SW.jpg" } } }
+        }
+      },
+
+      {
+        "sys": { "id": "9" },
+        "fields": {
+          "title": "The Witcher",
+          "price": 40.99,
+          "image": { "fields": { "file": { "url": "/image/W3.jpg" } } }
+        }
+      }
+
+    ]
+  }

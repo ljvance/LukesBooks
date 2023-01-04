@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Register </title>
+  <link rel="stylesheet" href="/css">
+</head>
+
+<body>
+  <div id = "wrapper">
+    <div class="pleaseWork">
+  <form action="/register-server" method="post">
+    <div class="authenstyle">
+      <h1>Register</h1>
+    </div>
+    <div class="field">
+        <label>First Name:</label>
+        <input type="text" name="firstname" />
+        <br/>
+    </div>
+    <div class="field">
+        <label>Last Name:</label>
+        <input type="text" name="lastname" />
+        <br/>
+    </div>
+    <div class="field">
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <br />
+    </div>
+    <div class="field">
+        <label>Zipcode:</label>
+        <!--name value is important and used with req.body-->
+        <input type="text" name="zipcode" />
+        <br/>
+    </div>
+    <div class="field">
+      <label>Username:</label>
+      <!--name value is important and used with req.body-->
+      <input type="text" name="username" />
+      <br />
+    </div>
+    <div class="field">
+      <label>Password:</label>
+      <!--name value is important and used with req.body-->
+      <input type="password" name="password" required />
+    </div>
+    <br>
+    <div class="field">
+      <input class="submit-btn" type="submit" value="Submit" required />
+    </div>
+    <label id="error-message"></label>
+  </form>
+  </div>
+  </div>
+</body>
+</html>
